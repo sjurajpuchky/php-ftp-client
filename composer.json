@@ -1,0 +1,23 @@
+{
+  "name": "baba/php-ftp-client",
+  "type": "library",
+  "license": "GPL-2.0-only",
+  "authors": [
+    {
+      "name": "Juraj Puchký - BABA Tumise s.r.o.",
+      "email": "info@baba.bj"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BABA\\FTP\\": "src/"
+    }
+  },
+  "provide": {
+    "baba/php-ftp-client": "1.0.0"
+  },
+  "require": {
+    "php": ">=7.3",
+    "nicolab/php-ftp-client": "^1.5",
+  }
+}
