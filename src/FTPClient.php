@@ -5,7 +5,7 @@ namespace BABA\FTP;
 
 use \Exception;
 
-class FtpClient
+class FTPClient
 {
     private $hostname = "";
     private $username = "";
