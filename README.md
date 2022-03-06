@@ -33,6 +33,7 @@ https://www.webtrace.cz - Tvorba portálů a ecommerce b2b/b2c (eshopů) na zak�
 
 # Log
 1.0.0 - first release
+1.0.1 - added support passive mode
 
 # Copyright
 &copy; 2021 BABA Tumise s.r.o.

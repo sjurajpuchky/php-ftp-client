@@ -11,6 +11,7 @@ class FTPClient
     private $username = "";
     private $password = "";
     private $rootfolder = "";
+    private $passive = true;
 
 
     /** @var \FtpClient\FtpClient  */
@@ -22,14 +23,15 @@ class FTPClient
      * @param string $username
      * @param string $password
      * @param string $rootFolder
-     * @throws \Lazzard\FtpClient\Exception\ConnectionException
+     * @param bool $passive
      */
-    public function __construct(string $hostname, string $username, string $password, string $rootFolder)
+    public function __construct(string $hostname, string $username, string $password, string $rootFolder, bool $passive = true)
     {
         $this->hostname = $hostname;
         $this->username = $username;
         $this->password = $password;
         $this->rootfolder = $rootFolder;
+        $this->passive = $passive;
         $this->ftp = new \FtpClient\FtpClient();
     }
 
@@ -41,6 +43,7 @@ class FTPClient
         if (!$this->ftp->connect($this->hostname)) {
             throw new Exception("FTP: Connection problem");
         }
+        $this->ftp->pasv($this->passive);
         if (!$this->ftp->login($this->username,$this->password)) {
             throw new Exception("FTP: Incorect login");
         }

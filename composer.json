@@ -14,7 +14,7 @@
     }
   },
   "provide": {
-    "baba/php-ftp-client": "1.0.0"
+    "baba/php-ftp-client": "1.0.1"
   },
   "require": {
     "php": ">=7.3",
